@@ -1,9 +1,10 @@
 import telebot
 from telebot.async_telebot import AsyncTeleBot
+import asyncio
 import requests
 import random
 
-bot = AsyncTeleBot.TeleBot("5349158861:AAHDYoxRZ06mgLICouCMXfxKc482tI-_l7Y")
+bot = AsyncTeleBot("5349158861:AAHDYoxRZ06mgLICouCMXfxKc482tI-_l7Y")
 
 @bot.message_handler(commands=['start'])
 async def send_welcome(message):
