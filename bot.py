@@ -64,10 +64,10 @@ async def s(ctx, member: discord.Member=None):
      users = await get_bank_data()
      wallet_amt = users[str(member.id)]["wallet"]
      bank_amt = users[str(member.id)]["bank"]
-     em = discord.Embed(title=f"رصيد {member.name}",color = discord.Color.random())
+     em = discord.Embed(title=f"👤 {member.name}",color = discord.Color.#ebaf5a())
      em.set_thumbnail(url=member.avatar)
-     em.add_field(name="رصيد المحفظة", value=f"{wallet_amt} سيركو")
-     em.add_field(name="رصيد البنك", value=f"{bank_amt} سيركو")
+     em.add_field(name="💵 |", value=f"{wallet_amt}")
+     em.add_field(name="🏦 |", value=f"{bank_amt}")
      msg=await ctx.send(embed= em)
      await msg.add_reaction("<:Serko:1216407871680544931>")
 
@@ -241,7 +241,7 @@ async def top(ctx,x = 1):
 
      total = sorted(total,reverse=True)    
 
-     em = discord.Embed(title=f"اغنى {x} اصحاب سيركو", color = discord.Color.random())
+     em = discord.Embed(title=f"اغنى {x} اصحاب سيركو", color = discord.Color.#ebaf5a())
      em.set_thumbnail(url="https://fontmeme.com/permalink/240310/7f4de2c774f4be4039a5251ab4c848b0.png")
      index = 1
      for amt in total:
@@ -376,7 +376,7 @@ async def buy(ctx,item):
 إضافي:
 تم الشراء بـ روم: {ctx.channel.name}
 
-**""", color=discord.Color.random())
+**""", color=discord.Color.#ebaf5a())
  buy.set_thumbnail(url=ctx.guild.icon)
  await channel.send(embed=buy)
 
