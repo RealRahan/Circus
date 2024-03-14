@@ -4,7 +4,7 @@ import random
 import sys
 import json
 import datetime
-from keep_alive import keep_alive
+from keep_alive.py import keep_alive
 
 prefix="."
 romid=1214174154438221846
