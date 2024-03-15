@@ -4,7 +4,6 @@ import random
 import sys
 import json
 import datetime
-from keep_alive import keep_alive
 
 prefix="."
 romid=1214174154438221846
@@ -390,5 +389,4 @@ async def buy(ctx,item):
  buy.set_thumbnail(url=ctx.guild.icon)
  await channel.send(embed=buy)
 
-keep_alive()
 client.run("OTQ0ODU0MTY5MTQ2MjQ5MjU3.GJUhRk.9MOh_2NU0k63ge4jCmDtQZY28WIhGF-_q2Koy8")
