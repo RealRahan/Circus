@@ -64,7 +64,7 @@ async def s(ctx, member: discord.Member=None):
      users = await get_bank_data()
      wallet_amt = users[str(member.id)]["wallet"]
      bank_amt = users[str(member.id)]["bank"]
-     em = discord.Embed(title=f"👤 {member.name}",color = discord.Color.#ebaf5a())
+     em = discord.Embed(title=f"👤 {member.name}",color = discord.Color.orange())
      em.set_thumbnail(url=member.avatar)
      em.add_field(name="💵 |", value=f"{wallet_amt}")
      em.add_field(name="🏦 |", value=f"{bank_amt}")
@@ -241,7 +241,7 @@ async def top(ctx,x = 1):
 
      total = sorted(total,reverse=True)    
 
-     em = discord.Embed(title=f"اغنى {x} اصحاب سيركو", color = discord.Color.#ebaf5a())
+     em = discord.Embed(title=f"اغنى {x} اصحاب سيركو", color = discord.Color.orange())
      em.set_thumbnail(url="https://fontmeme.com/permalink/240310/7f4de2c774f4be4039a5251ab4c848b0.png")
      index = 1
      for amt in total:
@@ -376,7 +376,7 @@ async def buy(ctx,item):
 إضافي:
 تم الشراء بـ روم: {ctx.channel.name}
 
-**""", color=discord.Color.#ebaf5a())
+**""", color=discord.Color.orange())
  buy.set_thumbnail(url=ctx.guild.icon)
  await channel.send(embed=buy)
 
