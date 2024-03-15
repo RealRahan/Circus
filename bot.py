@@ -19,16 +19,16 @@ async def on_ready():
 @client.command()
 async def help(ctx):
  e=discord.Embed(title="**المساعدة**", description=f"""**
-1 - {prefix}`help`
+1 - `.help`
 لأظهار جميع الاوامر
 
-2 - {prefix}`ping`
+2 - `.ping`
 سرعة الإستجابة
 
-3 - {prefix}`daily`
+3 - `.daily`
 لأخذ المكافأة اليومية
 
-4 - {prefix}`bdaily`
+4 - `.bdaily`
 لأخذ المكافأة اليومية الثانيه (متاحه فقط لـ <@&1195702880716476537> ..)
 
 5 - `.s`
@@ -149,7 +149,7 @@ async def pull(ctx,amount=None):
          return
      await update_bank(ctx.author,amount)
      await update_bank(ctx.author,-1*amount,'bank')
-     em=discord.Embed(description=f"**تم سحب {amount} سيركو**", color=ctx.author.color)
+     em=discord.Embed(description=f"**تم سحب {amount} سيركو من البنك**", color=ctx.author.color)
      em.set_thumbnail(url="https://fontmeme.com/permalink/240310/7f4de2c774f4be4039a5251ab4c848b0.png")
      msg=await ctx.send(embed=em)
      await msg.add_reaction("<:Serko:1216407871680544931>")
@@ -175,7 +175,7 @@ async def deposit(ctx,amount:int = None):
       return
      await update_bank(ctx.author,-1*amount)
      await update_bank(ctx.author,amount,'bank')
-     em=discord.Embed(description=f"**تم ايداع {amount} سيركو**", color=ctx.author.color)
+     em=discord.Embed(description=f"**تم ايداع {amount} سيركو في البنك**", color=ctx.author.color)
      em.set_thumbnail(url="https://fontmeme.com/permalink/240310/7f4de2c774f4be4039a5251ab4c848b0.png")
      msg=await ctx.send(embed=em)
      await msg.add_reaction("<:Serko:1216407871680544931>")
@@ -310,7 +310,7 @@ mainshop = [{"name":"عبد","price":100,"description":""},
 
 @client.command()
 async def shop(ctx):
-    em = discord.Embed(title = "الشوب", description=f"**للشراء: {prefix}buy اسم الرتبة**", color=discord.Color.random())
+    em = discord.Embed(title = "The Shop", description=f"**للشراء: {prefix}buy اسم الرتبة**", color=discord.Color.orange())
     for item in mainshop:
         name = item["name"]
         price = item["price"]
@@ -370,7 +370,7 @@ async def buy(ctx,item):
    await ctx.send(f"**لاتمتلك مال كافي لشراء {item}**")
    return
  await ctx.author.add_roles(discord.utils.get(ctx.guild.roles, name=item))
- await ctx.send(f"**مبروك، اشتريت رتبة {item}**")
+ await ctx.send(f"**💸 | تم شراء رتبة {item}**")
  timestamp = datetime.datetime.now()
  users = await get_bank_data()
  walletnow= users[str(ctx.author.id)]["wallet"]
