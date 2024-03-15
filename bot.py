@@ -20,30 +20,40 @@ async def on_ready():
 @client.command()
 async def help(ctx):
  e=discord.Embed(title="**المساعدة**", description=f"""**
-1-{prefix}`help`
-إظهار جميع الاوامر
-2-{prefix}`ping`
-سرعة الإستجابة
-3-{prefix}`daily`
-4-{prefix}`bdaily`
-لأخذ المكافأة اليومية الثانيه (متاحه فقط لـ <@&1195702880716476537> ..)
-أخذ المكافأة اليومية
-5-{prefix}`s`
-لإظهار رصيدك
-6-{prefix}`give/gv`
-لتحويل السيركو
-7-{prefix}`top/t`
-اغنى اعضاء السيرفر
-{prefix}`shop`
-لعرض الرتب المتوفرة
-8-{prefix}`rob/ro`
-سرقة سيركو من شخص معين
-9-{prefix}`deposit/dep`
-لإيداع السيركو وحمايتها من السارقين
-10-{prefix}`pull`
-سحب السيركو (لشراء الرتب، الخ)
+1 - {prefix}`help`
+لأظهار جميع الاوامر
 
-اكتب الأوامر فقط في روم <#1214174154438221846>
+2 - {prefix}`ping`
+سرعة الإستجابة
+
+3 - {prefix}`daily`
+لأخذ المكافأة اليومية
+
+4 - {prefix}`bdaily`
+لأخذ المكافأة اليومية الثانيه (متاحه فقط لـ <@&1195702880716476537> ..)
+
+5 - `.s`
+لإظهار احصائيات حسابك
+
+6 - `.give`
+لتحويل السيركو
+
+7 - `.top`
+لرؤية اغنى اصحاب السيركو
+
+8 – `.shop`
+لعرض الرتب المتوفرة
+
+9 - `.rob`
+لسرقة سيركو من شخص اخر
+
+10 - `.dep`
+لإيداع السيركو في البنك وحمايتها من السارقين
+
+11 - `.pull`
+لسحب السيركو من البنك
+
+يمكنك كتابة الأوامر فقط في <#121417415443822184 >
 **""", color=ctx.author.color)
  e.set_thumbnail(url="https://fontmeme.com/permalink/240310/7f4de2c774f4be4039a5251ab4c848b0.png")
  e.set_image(url="https://images-ext-2.discordapp.net/external/K5qbyGsaKZoFkxbujT7ysrx_Zqe16KIijDVjsDeYOzQ/https/i.imgflip.com/8j4o6c.gif")
