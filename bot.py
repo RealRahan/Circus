@@ -89,7 +89,7 @@ async def daily(ctx):
      users = await get_bank_data()
      if ctx.channel.id == romid:
       earnings = random.randrange(3000)
-      em=discord.Embed(description=f"**حصلت على {earnings} سيركو**", color=ctx.author.color)
+      em=discord.Embed(description=f"**لقد حصلت على {earnings} سيركو**", color=ctx.author.color)
       em.set_thumbnail(url="https://fontmeme.com/permalink/240310/e637c9bbce427c17ba8087f604b64553.png")
       msg=await ctx.send(embed=em)
       await msg.add_reaction("<:Serko:1216407871680544931>")
@@ -150,14 +150,14 @@ async def pull(ctx,amount=None):
          return
      await update_bank(ctx.author,amount)
      await update_bank(ctx.author,-1*amount,'bank')
-     em=discord.Embed(description=f"**تم سحب {amount} سيركو من البنك**", color=ctx.author.color)
+     em=discord.Embed(description=f"**💰 | تم سحب {amount} سيركو من البنك**", color=ctx.author.color)
      em.set_thumbnail(url="https://fontmeme.com/permalink/240310/7f4de2c774f4be4039a5251ab4c848b0.png")
      msg=await ctx.send(embed=em)
      await msg.add_reaction("<:Serko:1216407871680544931>")
 
 
 @client.command(aliases=['dep'])
-async def deposit(ctx,amount:int = None):
+async def dep(ctx,amount:int = None):
     if ctx.channel.id == romid:
      if amount == None:
          await ctx.send("**يرجى كتابة العدد**")
@@ -176,7 +176,7 @@ async def deposit(ctx,amount:int = None):
       return
      await update_bank(ctx.author,-1*amount)
      await update_bank(ctx.author,amount,'bank')
-     em=discord.Embed(description=f"**تم ايداع {amount} سيركو في البنك**", color=ctx.author.color)
+     em=discord.Embed(description=f"**🏦 | تم ايداع {amount} سيركو في البنك**", color=ctx.author.color)
      em.set_thumbnail(url="https://fontmeme.com/permalink/240310/7f4de2c774f4be4039a5251ab4c848b0.png")
      msg=await ctx.send(embed=em)
      await msg.add_reaction("<:Serko:1216407871680544931>")
@@ -232,7 +232,7 @@ async def rob(ctx,member : discord.Member):
      await update_bank(ctx.author,earning)
      await update_bank(member,-1*earning)
      await ctx.author.add_roles(discord.utils.get(ctx.guild.roles, name="سراق"))
-     em=discord.Embed(description=f"**سرقت محفظة {member} وحصلت على {earning} سيركو**", color=ctx.author.color)
+     em=discord.Embed(description=f"**لقد سرقت محفظة {member} وحصلت على {earning} سيركو**", color=ctx.author.color)
      em.set_thumbnail(url="https://fontmeme.com/permalink/240310/7f4de2c774f4be4039a5251ab4c848b0.png")
      msg=await ctx.send(embed=em)
      await msg.add_reaction("<:Serko:1216407871680544931>")
@@ -377,14 +377,13 @@ async def buy(ctx,item):
  walletnow= users[str(ctx.author.id)]["wallet"]
  banknow = users[str(ctx.author.id)]["bank"]
  channel = client.get_channel(1215703791232360519)
- buy=discord.Embed(title="**لوق الشراء**", description=f"""**
-المشتري: {ctx.author.name}
-الرتبة: {item}
-رصيده الحالي: {walletnow} بالمحفظة، {banknow} بالبنك
-وقت الشراء: {timestamp.strftime(r"%I:%M %p")}
-
-إضافي:
-تم الشراء بـ روم: {ctx.channel.name}
+ buy=discord.Embed(title="**SHOP LOGS**", description=f"""**
+> **👤 | {ctx.author.name}**
+> 
+> **🏅 | {item}**
+> 
+> **🕰️ | {timestamp.strftime(r"%I:%M %p")}**
+**–––––––––––––––––––––––**
 
 **""", color=discord.Color.orange())
  buy.set_thumbnail(url=ctx.guild.icon)
