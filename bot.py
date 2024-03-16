@@ -18,7 +18,7 @@ async def on_ready():
 
 @client.command()
 async def help(ctx):
- e=discord.Embed(title="**المساعدة**", description=f"""**
+ e=discord.Embed(title="**THE HELP MENU**", description=f"""**
 1 - `.help`
 لأظهار جميع الاوامر
 
@@ -52,7 +52,8 @@ async def help(ctx):
 11 - `.pull`
 لسحب السيركو من البنك
 
-يمكنك كتابة الأوامر فقط في <#121417415443822184 >
+يمكنك كتابة الأوامر فقط في <#1214174154438221846>
+**–––––––––––––––––––––––––––––––**
 **""", color=ctx.author.color)
  e.set_thumbnail(url="https://fontmeme.com/permalink/240310/7f4de2c774f4be4039a5251ab4c848b0.png")
  e.set_image(url="https://images-ext-2.discordapp.net/external/K5qbyGsaKZoFkxbujT7ysrx_Zqe16KIijDVjsDeYOzQ/https/i.imgflip.com/8j4o6c.gif")
