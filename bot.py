@@ -371,20 +371,19 @@ async def buy(ctx,item):
    await ctx.send(f"**لاتمتلك مال كافي لشراء {item}**")
    return
  await ctx.author.add_roles(discord.utils.get(ctx.guild.roles, name=item))
- await ctx.send(f"**💸 | تم شراء رتبة {item}**")
+ await ctx.send(f"**💸 | {item} تم شراء رتبة**")
  timestamp = datetime.datetime.now()
  users = await get_bank_data()
  walletnow= users[str(ctx.author.id)]["wallet"]
  banknow = users[str(ctx.author.id)]["bank"]
  channel = client.get_channel(1215703791232360519)
  buy=discord.Embed(title="**SHOP LOGS**", description=f"""**
-> **👤 | {ctx.author.name}**
-> 
-> **🏅 | {item}**
-> 
-> **🕰️ | {timestamp.strftime(r"%I:%M %p")}**
-**–––––––––––––––––––––––**
+> 👤 | @{ctx.author.name}
 
+> 🏅 | {item}
+
+> 🕰️ | {timestamp.strftime(r"%I:%M %p")}
+–––––––––––––––––––––––
 **""", color=discord.Color.orange())
  buy.set_thumbnail(url=ctx.guild.icon)
  await channel.send(embed=buy)
