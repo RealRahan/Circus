@@ -75,8 +75,8 @@ async def s(ctx, member: discord.Member=None):
      bank_amt = users[str(member.id)]["bank"]
      em = discord.Embed(title=f"👤 {member.name}",color = discord.Color.orange())
      em.set_thumbnail(url=member.avatar)
-     em.add_field(name="💵 |", value=f"{wallet_amt}")
-     em.add_field(name="🏦 |", value=f"{bank_amt}")
+     em.add_field(name="**💵 | {wallet_amt}", value=f"")
+     em.add_field(name="**🏦 | {bank_amt}**", value=f"")
      msg=await ctx.send(embed= em)
      await msg.add_reaction("<:Serko:1216407871680544931>")
 
