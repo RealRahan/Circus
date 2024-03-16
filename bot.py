@@ -389,4 +389,4 @@ async def buy(ctx,item):
  buy.set_thumbnail(url=ctx.guild.icon)
  await channel.send(embed=buy)
 
-client.run("OTQ0ODU0MTY5MTQ2MjQ5MjU3.GJUhRk.9MOh_2NU0k63ge4jCmDtQZY28WIhGF-_q2Koy8")
+client.run("OTQ0ODU0MTY5MTQ2MjQ5MjU3.GaQ8Df.3Q7YsC0p6QNfotJxp181_m2a0wn7q4pNjayzw8")
